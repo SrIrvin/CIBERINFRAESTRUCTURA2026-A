@@ -7,10 +7,10 @@ namespace CIBERINFRAESTRUCTURA
         {
             ApplicationConfiguration.Initialize();
 
-            // Composición de dependencias (Clean Code / SOLID)
-            IAuthenticationService authService = new AuthenticationService();
-            
-            // Inyección manual del servicio en el formulario
+            // Intercambiamos la implementación (SOLID - Liskov Substitution)
+            // De momento usamos el servicio mockeado de MySQL
+            IAuthenticationService authService = new MySqlAuthenticationService();
+
             Application.Run(new Form1(authService));
         }
     }
