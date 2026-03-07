@@ -250,6 +250,7 @@ NuGet.Config
 BenchmarkDotNet.Artifacts/
 
 # Others
+README.pdf
 ClientBin/
 ~$*
 *~
