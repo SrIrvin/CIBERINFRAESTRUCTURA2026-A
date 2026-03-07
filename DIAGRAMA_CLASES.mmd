@@ -7,13 +7,19 @@ classDiagram
 
     class IAuthenticationService {
         <<interface>>
-        +Authenticate(string user, string pass) bool
-        +ValidatePasswordComplexity(string pass) bool
+        +Authenticate(string username, string password) bool
+        +ValidatePasswordComplexity(string password) bool
     }
 
     class AuthenticationService {
-        +Authenticate(string user, string pass) bool
-        +ValidatePasswordComplexity(string pass) bool
+        +Authenticate(string username, string password) bool
+        +ValidatePasswordComplexity(string password) bool
+    }
+
+    class MySqlAuthenticationService {
+        -string connectionString
+        +Authenticate(string username, string password) bool
+        +ValidatePasswordComplexity(string password) bool
     }
 
     class Form1 {
@@ -38,7 +44,8 @@ classDiagram
 
     %% Relaciones y Herencia
     Form <|-- Form1 : Hereda de
-    IAuthenticationService <|.. AuthenticationService : Implementa (SOLID - L/O)
+    IAuthenticationService <|.. AuthenticationService : Implementa (Memoria)
+    IAuthenticationService <|.. MySqlAuthenticationService : Implementa (MySQL Mock)
     Form1 o-- IAuthenticationService : Usa Agregación (SOLID - D)
-    Program ..> AuthenticationService : Instancia
-    Program ..> Form1 : Configura e Inyecta
+    Program ..> MySqlAuthenticationService : Instancia actual
+    Program ..> Form1 : Inyecta dependencia
