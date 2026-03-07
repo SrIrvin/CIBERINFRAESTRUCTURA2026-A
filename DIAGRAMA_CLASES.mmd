@@ -1,0 +1,44 @@
+classDiagram
+    class Form {
+        <<Framework>>
+        +Show()
+        +Dispose()
+    }
+
+    class IAuthenticationService {
+        <<interface>>
+        +Authenticate(string user, string pass) bool
+        +ValidatePasswordComplexity(string pass) bool
+    }
+
+    class AuthenticationService {
+        +Authenticate(string user, string pass) bool
+        +ValidatePasswordComplexity(string pass) bool
+    }
+
+    class Form1 {
+        -IAuthenticationService _authService
+        -TextBox txtUsername
+        -TextBox txtPassword
+        -TextBox txtConfirmPassword
+        -Button btnLogin
+        -Label lblUsername
+        -Label lblPassword
+        -Label lblConfirmPassword
+        -Label lblTitle
+        +Form1(IAuthenticationService authService)
+        -InitializeComponent() void
+        -btnLogin_Click(object sender, EventArgs e) void
+    }
+
+    class Program {
+        <<static>>
+        +Main()$ void
+    }
+
+    %% Relaciones y Herencia
+    Form <|-- Form1 : Hereda de
+    IAuthenticationService <|.. AuthenticationService : Implementa (SOLID - L/O)
+    Form1 o-- IAuthenticationService : Usa Agregación (SOLID - D)
+    Program ..> AuthenticationService : Instancia
+    Program ..> Form1 : Configura e Inyecta
