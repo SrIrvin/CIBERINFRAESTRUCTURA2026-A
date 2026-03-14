@@ -3,7 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace CIBERINFRAESTRUCTURA
+using CIBERINFRAESTRUCTURA.Services;
+using CIBERINFRAESTRUCTURA.Models;
+
+namespace CIBERINFRAESTRUCTURA.UI
 {
     public partial class DatabaseConfigForm : Form
     {

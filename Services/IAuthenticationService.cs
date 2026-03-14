@@ -1,4 +1,4 @@
-namespace CIBERINFRAESTRUCTURA
+namespace CIBERINFRAESTRUCTURA.Services
 {
     public interface IAuthenticationService
     {

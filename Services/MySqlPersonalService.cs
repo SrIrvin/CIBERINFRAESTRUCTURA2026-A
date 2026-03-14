@@ -2,7 +2,9 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 
-namespace CIBERINFRAESTRUCTURA
+using CIBERINFRAESTRUCTURA.Models;
+
+namespace CIBERINFRAESTRUCTURA.Services
 {
     public class MySqlPersonalService : IPersonalService
     {

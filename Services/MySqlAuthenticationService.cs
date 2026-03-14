@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace CIBERINFRAESTRUCTURA
+namespace CIBERINFRAESTRUCTURA.Services
 {
     public class MySqlAuthenticationService : IAuthenticationService
     {

@@ -1,4 +1,6 @@
-namespace CIBERINFRAESTRUCTURA
+using CIBERINFRAESTRUCTURA.Services;
+
+namespace CIBERINFRAESTRUCTURA.UI
 {
     public partial class Form1 : Form
     {

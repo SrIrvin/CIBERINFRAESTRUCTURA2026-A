@@ -1,4 +1,4 @@
-namespace CIBERINFRAESTRUCTURA
+namespace CIBERINFRAESTRUCTURA.UI
 {
     partial class Form1
     {

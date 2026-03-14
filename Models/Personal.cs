@@ -1,6 +1,6 @@
 using System;
 
-namespace CIBERINFRAESTRUCTURA
+namespace CIBERINFRAESTRUCTURA.Models
 {
     public class Personal
     {

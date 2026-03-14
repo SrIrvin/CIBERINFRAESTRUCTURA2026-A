@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 
-namespace CIBERINFRAESTRUCTURA
+using CIBERINFRAESTRUCTURA.Models;
+
+namespace CIBERINFRAESTRUCTURA.Services
 {
     public interface IPersonalService
     {
