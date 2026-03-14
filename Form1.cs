@@ -26,7 +26,7 @@ namespace CIBERINFRAESTRUCTURA
             // 2. Validación de Complejidad (Regex)
             if (!_authService.ValidatePasswordComplexity(password))
             {
-                MessageBox.Show("La contraseña debe tener: \n- 1 Mayúscula \n- 1 Minúscula \n- 1 Número \n- 1 Símbolo", 
+                MessageBox.Show("La contraseña debe tener: \n- 1 Mayúscula \n- 1 Minúscula \n- 1 Número \n- 1 Símbolo",
                                 "Seguridad Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
