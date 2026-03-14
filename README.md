@@ -1,39 +1,30 @@
-# Reporte de Proyecto: Formulario de Login Seguro con SOLID
+# Reporte de Proyecto: Formulario de Login Seguro con SOLID y MySQL
 **Estudiante:** Irving A. Sanchez R.  
 **Materia:** Ciberinfraestructura  
 
 ## 1. Introducción
-Este proyecto consiste en la implementación de un formulario de inicio de sesión (Login) desarrollado en C# .NET. El objetivo principal fue aplicar principios de diseño de software.
+Este proyecto consiste en la implementación de un sistema de inicio de sesión (Login) y visualización de datos desarrollado en C# .NET. Se enfoca en la aplicación de principios de diseño de software (SOLID), Clean Code y la integración con bases de datos MySQL.
 
-## 2. Arquitectura y Principios SOLID
-Se aplicaron los siguientes principios para estructurar la solución:
+## 2. Arquitectura y Estructura del Proyecto
+El código ha sido organizado siguiendo una estructura de carpetas profesional para separar las responsabilidades (SRP):
 
-*   **S - Single Responsibility Principle (SRP):** La lógica de validación y autenticación se separó completamente de la interfaz de usuario (UI), residiendo en la clase `AuthenticationService`. El formulario `Form1` solo se encarga de mostrar y capturar datos.
-*   **O - Open/Closed Principle (OCP):** Mediante el uso de la interfaz `IAuthenticationService`, el sistema permite extender la lógica de autenticación (por ejemplo, cambiar a una base de datos SQL) sin modificar el código del formulario.
-*   **D - Dependency Inversion Principle (DIP):** Se utilizó inyección de dependencias en el constructor del formulario, asegurando que el módulo de alto nivel no dependa de implementaciones de bajo nivel.
+*   **Models/**: Contiene las entidades de datos (ej. `Personal.cs`).
+*   **Services/**: Contiene la lógica de negocio y acceso a datos, desacoplada mediante interfaces (`IAuthenticationService`, `IPersonalService`).
+*   **UI/**: Contiene los formularios de la interfaz de usuario (`Form1`, `DatabaseConfigForm`) con un diseño oscuro y responsivo.
 
-## 3. Funcionalidades Implementadas
+### Principios SOLID Aplicados
+*   **S - Single Responsibility Principle (SRP):** Cada clase tiene una única razón para cambiar. Los servicios manejan la lógica, los modelos los datos y la UI la visualización.
+*   **O - Open/Closed Principle (OCP):** El sistema permite extender la lógica de autenticación o de obtención de datos mediante interfaces sin modificar los formularios.
+*   **D - Dependency Inversion Principle (DIP):** Los formularios dependen de abstracciones (interfaces) que son inyectadas, no de implementaciones concretas.
 
-### A. Validación de Complejidad de Contraseña
-Se implementó una expresión regular (**Regex**) robusta que obliga al cumplimiento de:
-*   Al menos una **letra mayúscula**.
-*   Al menos una **letra minúscula**.
-*   Al menos un **número**.
-*   Al menos un **símbolo** (caracter especial).
+## 3. Tabla de Datos (`cat_personal`)
+El sistema visualiza la información de la tabla `cat_personal` con los siguientes campos:
+*   Nombre, Apellido, Email, Teléfono, Cargo, Fecha de Contratación y Estado Activo.
 
-### B. Validación de Coincidencia
-El sistema incluye un segundo campo de entrada para confirmar la contraseña, validando que ambos textos sean idénticos.
-
-### C. Retroalimentación (UX)
-*   Manejo de diálogos (`MessageBox`) para informar sobre errores de validación.
-*   Mensaje de éxito específico solicitado: `"La contraseña ha sido validada"` al cumplir todas las reglas.
-
-## 4. Archivos Clave
-*   `Program.cs`: Configuración inicial e inyección del servicio.
-*   `IAuthenticationService.cs`: Contrato de servicios de seguridad.
-*   `AuthenticationService.cs`: Lógica de validación con Regex.
-*   `Form1.cs`: Manejo de eventos de la interfaz.
-*   `DIAGRAMA_CLASES.mmd`: Representación visual de la arquitectura.
+## 4. Guía de Uso
+1.  **Configuración de DB**: Al iniciar, ingrese el Host (`localhost`), Base de Datos (`mydb`), Usuario y Contraseña.
+2.  **Conexión**: Presione "Conectar y Cargar". El sistema validará la conexión y mostrará los registros de la tabla en un Grid responsivo.
+3.  **Login**: Una vez establecida la conexión, se habilitará el botón para acceder al formulario de validación de credenciales.
 
 ---
 *Este proyecto fue realizado como parte de las actividades académicas para la Maestría en Cómputo Aplicado.*
