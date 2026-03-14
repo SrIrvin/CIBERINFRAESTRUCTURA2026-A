@@ -15,197 +15,194 @@ namespace CIBERINFRAESTRUCTURA
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlMain = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtServer = new System.Windows.Forms.TextBox();
-            this.txtDatabase = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.pnlButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnConnect = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
-            this.dgvLogs = new System.Windows.Forms.DataGridView();
-            this.Timestamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlMain.SuspendLayout();
-            this.pnlButtons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).BeginInit();
-            this.SuspendLayout();
+            pnlMain = new TableLayoutPanel();
+            lblTitle = new Label();
+            txtServer = new TextBox();
+            txtDatabase = new TextBox();
+            txtUser = new TextBox();
+            txtPassword = new TextBox();
+            pnlButtons = new FlowLayoutPanel();
+            btnConnect = new Button();
+            btnContinue = new Button();
+            dgvPersonal = new DataGridView();
+            pnlMain.SuspendLayout();
+            pnlButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPersonal).BeginInit();
+            SuspendLayout();
             // 
             // pnlMain
             // 
-            this.pnlMain.ColumnCount = 1;
-            this.pnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlMain.Controls.Add(this.lblTitle, 0, 0);
-            this.pnlMain.Controls.Add(this.txtServer, 0, 1);
-            this.pnlMain.Controls.Add(this.txtDatabase, 0, 2);
-            this.pnlMain.Controls.Add(this.txtUser, 0, 3);
-            this.pnlMain.Controls.Add(this.txtPassword, 0, 4);
-            this.pnlMain.Controls.Add(this.pnlButtons, 0, 5);
-            this.pnlMain.Controls.Add(this.dgvLogs, 0, 6);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(20, 20);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.RowCount = 7;
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.pnlMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlMain.Size = new System.Drawing.Size(460, 460);
+            pnlMain.ColumnCount = 1;
+            pnlMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            pnlMain.Controls.Add(lblTitle, 0, 0);
+            pnlMain.Controls.Add(txtServer, 0, 1);
+            pnlMain.Controls.Add(txtDatabase, 0, 2);
+            pnlMain.Controls.Add(txtUser, 0, 3);
+            pnlMain.Controls.Add(txtPassword, 0, 4);
+            pnlMain.Controls.Add(pnlButtons, 0, 5);
+            pnlMain.Controls.Add(dgvPersonal, 0, 6);
+            pnlMain.Dock = DockStyle.Fill;
+            pnlMain.Location = new Point(29, 33);
+            pnlMain.Margin = new Padding(4, 5, 4, 5);
+            pnlMain.Name = "pnlMain";
+            pnlMain.RowCount = 7;
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 67F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 83F));
+            pnlMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            pnlMain.Size = new Size(1085, 934);
+            pnlMain.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblTitle.Location = new System.Drawing.Point(3, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(225, 25);
-            this.lblTitle.Text = "Configuración de MySQL";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(0, 122, 204);
+            lblTitle.Location = new Point(4, 0);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(299, 38);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Configuración y Datos";
             // 
             // txtServer
             // 
-            this.txtServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.txtServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtServer.ForeColor = System.Drawing.Color.White;
-            this.txtServer.PlaceholderText = "Servidor (ej. localhost)";
-            this.txtServer.Text = "localhost";
+            txtServer.BackColor = Color.FromArgb(45, 45, 48);
+            txtServer.BorderStyle = BorderStyle.FixedSingle;
+            txtServer.Dock = DockStyle.Fill;
+            txtServer.ForeColor = Color.White;
+            txtServer.Location = new Point(4, 72);
+            txtServer.Margin = new Padding(4, 5, 4, 5);
+            txtServer.Name = "txtServer";
+            txtServer.PlaceholderText = "Servidor";
+            txtServer.Size = new Size(1077, 31);
+            txtServer.TabIndex = 1;
+            txtServer.Text = "localhost";
             // 
             // txtDatabase
             // 
-            this.txtDatabase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.txtDatabase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDatabase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDatabase.ForeColor = System.Drawing.Color.White;
-            this.txtDatabase.PlaceholderText = "Base de Datos";
-            this.txtDatabase.Text = "mydb";
+            txtDatabase.BackColor = Color.FromArgb(45, 45, 48);
+            txtDatabase.BorderStyle = BorderStyle.FixedSingle;
+            txtDatabase.Dock = DockStyle.Fill;
+            txtDatabase.ForeColor = Color.White;
+            txtDatabase.Location = new Point(4, 130);
+            txtDatabase.Margin = new Padding(4, 5, 4, 5);
+            txtDatabase.Name = "txtDatabase";
+            txtDatabase.PlaceholderText = "Base de Datos";
+            txtDatabase.Size = new Size(1077, 31);
+            txtDatabase.TabIndex = 2;
+            txtDatabase.Text = "mydb";
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.PlaceholderText = "Usuario";
-            this.txtUser.Text = "adm1N";
+            txtUser.BackColor = Color.FromArgb(45, 45, 48);
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
+            txtUser.Dock = DockStyle.Fill;
+            txtUser.ForeColor = Color.White;
+            txtUser.Location = new Point(4, 188);
+            txtUser.Margin = new Padding(4, 5, 4, 5);
+            txtUser.Name = "txtUser";
+            txtUser.PlaceholderText = "Usuario";
+            txtUser.Size = new Size(1077, 31);
+            txtUser.TabIndex = 3;
+            txtUser.Text = "adm1N";
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PlaceholderText = "Contraseña";
-            this.txtPassword.Text = "w5GR3B635ft7DfHroRPMmU6K5hblS9Z6H1dZiVm6jhbKdDegJS48oP08TszEH9w3";
+            txtPassword.BackColor = Color.FromArgb(45, 45, 48);
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Dock = DockStyle.Fill;
+            txtPassword.ForeColor = Color.White;
+            txtPassword.Location = new Point(4, 246);
+            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Contraseña";
+            txtPassword.Size = new Size(1077, 31);
+            txtPassword.TabIndex = 4;
+            txtPassword.Text = "w5GR3B635ft7DfHroRPMmU6K5hblS9Z6H1dZiVm6jhbKdDegJS48oP08TszEH9w3";
             // 
             // pnlButtons
             // 
-            this.pnlButtons.Controls.Add(this.btnConnect);
-            this.pnlButtons.Controls.Add(this.btnContinue);
-            this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlButtons.Location = new System.Drawing.Point(3, 218);
-            this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(454, 44);
+            pnlButtons.Controls.Add(btnConnect);
+            pnlButtons.Controls.Add(btnContinue);
+            pnlButtons.Dock = DockStyle.Fill;
+            pnlButtons.Location = new Point(4, 304);
+            pnlButtons.Margin = new Padding(4, 5, 4, 5);
+            pnlButtons.Name = "pnlButtons";
+            pnlButtons.Size = new Size(1077, 73);
+            pnlButtons.TabIndex = 5;
             // 
             // btnConnect
             // 
-            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.ForeColor = System.Drawing.Color.White;
-            this.btnConnect.Location = new System.Drawing.Point(3, 3);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(130, 35);
-            this.btnConnect.Text = "Probar Conexión";
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            btnConnect.BackColor = Color.FromArgb(0, 122, 204);
+            btnConnect.FlatAppearance.BorderSize = 0;
+            btnConnect.FlatStyle = FlatStyle.Flat;
+            btnConnect.ForeColor = Color.White;
+            btnConnect.Location = new Point(4, 5);
+            btnConnect.Margin = new Padding(4, 5, 4, 5);
+            btnConnect.Name = "btnConnect";
+            btnConnect.Size = new Size(214, 58);
+            btnConnect.TabIndex = 0;
+            btnConnect.Text = "Conectar y Cargar";
+            btnConnect.UseVisualStyleBackColor = false;
+            btnConnect.Click += btnConnect_Click;
             // 
             // btnContinue
             // 
-            this.btnContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnContinue.Enabled = false;
-            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnContinue.Location = new System.Drawing.Point(139, 3);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(130, 35);
-            this.btnContinue.Text = "Ir al Login";
-            this.btnContinue.UseVisualStyleBackColor = false;
-            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            btnContinue.BackColor = Color.FromArgb(40, 40, 40);
+            btnContinue.Enabled = false;
+            btnContinue.FlatAppearance.BorderColor = Color.FromArgb(0, 122, 204);
+            btnContinue.FlatStyle = FlatStyle.Flat;
+            btnContinue.ForeColor = Color.FromArgb(0, 122, 204);
+            btnContinue.Location = new Point(226, 5);
+            btnContinue.Margin = new Padding(4, 5, 4, 5);
+            btnContinue.Name = "btnContinue";
+            btnContinue.Size = new Size(186, 58);
+            btnContinue.TabIndex = 1;
+            btnContinue.Text = "Ir al Login";
+            btnContinue.UseVisualStyleBackColor = false;
+            btnContinue.Click += btnContinue_Click;
             // 
-            // dgvLogs
+            // dgvPersonal
             // 
-            this.dgvLogs.AllowUserToAddRows = false;
-            this.dgvLogs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dgvLogs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLogs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Timestamp,
-            this.Message});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLogs.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLogs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLogs.EnableHeadersVisualStyles = false;
-            this.dgvLogs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
-            this.dgvLogs.Location = new System.Drawing.Point(3, 268);
-            this.dgvLogs.Name = "dgvLogs";
-            this.dgvLogs.ReadOnly = true;
-            this.dgvLogs.RowHeadersVisible = false;
-            this.dgvLogs.Size = new System.Drawing.Size(454, 189);
-            // 
-            // Timestamp
-            // 
-            this.Timestamp.HeaderText = "Hora";
-            this.Timestamp.Name = "Timestamp";
-            this.Timestamp.ReadOnly = true;
-            this.Timestamp.Width = 80;
-            // 
-            // Message
-            // 
-            this.Message.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Message.HeaderText = "Mensaje";
-            this.Message.Name = "Message";
-            this.Message.ReadOnly = true;
+            dgvPersonal.AllowUserToAddRows = false;
+            dgvPersonal.BackgroundColor = Color.FromArgb(30, 30, 30);
+            dgvPersonal.BorderStyle = BorderStyle.None;
+            dgvPersonal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPersonal.Dock = DockStyle.Fill;
+            dgvPersonal.EnableHeadersVisualStyles = false;
+            dgvPersonal.GridColor = Color.FromArgb(63, 63, 70);
+            dgvPersonal.Location = new Point(4, 387);
+            dgvPersonal.Margin = new Padding(4, 5, 4, 5);
+            dgvPersonal.Name = "dgvPersonal";
+            dgvPersonal.ReadOnly = true;
+            dgvPersonal.RowHeadersVisible = false;
+            dgvPersonal.RowHeadersWidth = 62;
+            dgvPersonal.Size = new Size(1077, 542);
+            dgvPersonal.TabIndex = 6;
             // 
             // DatabaseConfigForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(500, 500);
-            this.Controls.Add(this.pnlMain);
-            this.MinimumSize = new System.Drawing.Size(400, 450);
-            this.Padding = new System.Windows.Forms.Padding(20);
-            this.Name = "DatabaseConfigForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Configuración DB - Ciberinfraestructura";
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            this.pnlButtons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLogs)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(30, 30, 30);
+            ClientSize = new Size(1143, 1000);
+            Controls.Add(pnlMain);
+            Margin = new Padding(4, 5, 4, 5);
+            MinimumSize = new Size(848, 796);
+            Name = "DatabaseConfigForm";
+            Padding = new Padding(29, 33, 29, 33);
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Personal - Ciberinfraestructura";
+            pnlMain.ResumeLayout(false);
+            pnlMain.PerformLayout();
+            pnlButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvPersonal).EndInit();
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.TableLayoutPanel pnlMain;
@@ -217,8 +214,6 @@ namespace CIBERINFRAESTRUCTURA
         private System.Windows.Forms.FlowLayoutPanel pnlButtons;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.DataGridView dgvLogs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Timestamp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Message;
+        private System.Windows.Forms.DataGridView dgvPersonal;
     }
 }
